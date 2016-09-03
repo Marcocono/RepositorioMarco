@@ -1,0 +1,77 @@
+package clases;
+
+import java.util.ArrayList;
+
+import javax.swing.JOptionPane;
+
+public class LineaTelefonica {
+	
+	private long numeroTelefonico;
+	private long imei;
+	private LineaTelefonica lineaTelefonica;
+	private ArrayList<Paquete> array; 
+	private int op = 0;
+	
+	/**
+	public LineaTelefonica(long numeroTelefonico, long imei) {
+		super();
+		this.numeroTelefonico = numeroTelefonico;
+		this.imei = imei;
+		new Internet();
+		new Mensajes();
+		new TiempoAire();
+	}
+	 */
+	
+	public LineaTelefonica(){ 
+		array = new ArrayList<Paquete>();
+		
+		//crear Objetos con polimorfismo, no olvidar definir los to string para que me retoner los datos. Dormir!!!!!!
+		
+		solicitarDatos(lineaTelefonica);
+		
+		do{
+		op = Integer.valueOf(JOptionPane.showInputDialog("Que desea agregar:\n1 - Paquete de mensajes.\n2 - Paquete de internet."+
+		"\n3 - Tiempo aire."));
+			switch (op) {
+			case 1:
+				array.add(new Mensajes());
+				break;
+			case 2:
+				array.add(new Internet());
+			case 3:
+				array.add(new TiempoAire());
+				break;
+			case 4:
+				break;
+
+			default:
+				JOptionPane.showMessageDialog(null, "Ingrese una opcion.");
+				break;
+			}
+		}while(op != 4);
+		
+	}
+
+	public void solicitarDatos(LineaTelefonica lineaTelefonica){
+		numeroTelefonico = Long.valueOf(JOptionPane.showInputDialog("Ingrese el numero telefonico:", this.getNumeroTelefonico())); 
+		imei = Long.valueOf(JOptionPane.showInputDialog("Imei:", this.getImei())); 
+	}
+	
+	public long getNumeroTelefonico() {
+		return numeroTelefonico;
+	}
+
+	public void setNumeroTelefonico(long numeroTelefonico) {
+		this.numeroTelefonico = numeroTelefonico;
+	}
+
+	public long getImei() {
+		return imei;
+	}
+
+	public void setImei(long imei) {
+		this.imei = imei;
+	}
+	
+}

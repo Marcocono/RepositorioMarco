@@ -1,0 +1,146 @@
+package clases;
+
+import java.util.ArrayList;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import javax.swing.JOptionPane;
+
+public class Cliente {
+	private int edad;
+	private int op = 0;
+	
+	private String identidad;
+	private String Nombre;
+	private String Apellido;
+	private String Genero;
+	private String errores = "";
+	private String patronIdentidad = "[0-9]{4}-[0-9]{4}-[0-9]{5}";
+	
+	public LineaTelefonica lineaTelefonica1;
+	public ArrayList<LineaTelefonica> lineaTelefonica; 
+	//OTRA FORMA DEL CONSTRUCTOR
+	/**
+	public Cliente(long identidad, String nombre, String apellido,
+			String genero, int edad) {
+
+		this.identidad = identidad;
+		Nombre = nombre;
+		Apellido = apellido;
+		Genero = genero;
+		this.edad = edad;
+		op = Integer.valueOf(JOptionPane.showInputDialog("Cuantas lineas desea agregar?"));
+		lineaTelefonica.add(new LineaTelefonica());
+	}
+	*/
+	
+	//NECESARIo PARA INSTANCIAR
+	
+	public Cliente() {
+		lineaTelefonica = new ArrayList<LineaTelefonica>();
+		
+	}
+	
+	public void solicitarDatos(Cliente cliente){
+		errores = "";
+		Nombre = JOptionPane.showInputDialog("Ingrese el nombre:", this.getNombre());
+		Apellido = JOptionPane.showInputDialog("Ingrese el apellido:", this.getApellido());
+		Genero = JOptionPane.showInputDialog("Genero:", this.getGenero());
+		edad = Integer.valueOf(JOptionPane.showInputDialog("Ingrese la edad:", this.getEdad()));
+		identidad = JOptionPane.showInputDialog("Identidad:",this.getIdentidad());	
+		try {
+			op = Integer.valueOf(JOptionPane.showInputDialog("Cuantas lineas desea agregar:",this.getOp()));
+			for(int i= 0; i < op ; i++){
+				lineaTelefonica1 = new LineaTelefonica();
+				lineaTelefonica1.solicitarDatos(new LineaTelefonica());
+				lineaTelefonica.add(lineaTelefonica1);	}
+		} catch (NumberFormatException e) {
+			errores+="Ingrese un numero valido.\n";
+		}
+		
+	}
+	
+	public String validarDatos(){
+		if(identidad.isEmpty())
+			errores+="El campo identidad esta vacio\n";
+		if(edad==0)
+			errores+="El campo edad esta vacio\n";
+		if(Nombre.isEmpty())
+			errores += "El campo nombre esta vacio\n";
+		if(Genero.isEmpty())
+			errores+="El campo genero esta vacio\n";
+		if(Apellido.isEmpty())
+			errores += "El campo nombre esta vacio\n";
+		
+		if(!validarPatron(patronIdentidad, identidad))
+			errores += "El campo identidad debe tener el formato XXXX-XXXX-XXXXX\n";	
+		
+		return errores  ;
+	}
+	
+	public String getIdentidad() {
+		return identidad;
+	}
+	public void setIdentidad(String identidad) {
+		this.identidad = identidad;
+	}
+	public String getNombre() {
+		return Nombre;
+	}
+	public void setNombre(String nombre) {
+		Nombre = nombre;
+	}
+	public String getApellido() {
+		return Apellido;
+	}
+	public void setApellido(String apellido) {
+		Apellido = apellido;
+	}
+	public String getGenero() {
+		return Genero;
+	}
+	public void setGenero(String genero) {
+		Genero = genero;
+	}
+	public int getEdad() {
+		return edad;
+	}
+	public void setEdad(int edad) {
+		this.edad = edad;
+	}
+
+	public String getErrores() {
+		return errores;
+	}
+
+	public void setErrores(String errores) {
+		this.errores = errores;
+	}
+
+	public int getOp() {
+		return op;
+	}
+
+	public void setOp(int op) {
+		this.op = op;
+	}
+
+	public boolean validarPatron(String patron,String texto){
+		Pattern pattern = Pattern.compile(patron);
+		Matcher matcher = pattern.matcher(texto); 
+		return matcher.matches();
+			
+	}
+	@Override
+	public String toString() {
+		String s= "";
+		for(int i = 0; i < lineaTelefonica.size(); i++){
+			s += lineaTelefonica.get(i).toString() + "\t\t";
+		}
+		String string = getNombre() + "\t\t"  + getApellido() + "\t\t" + getGenero() + "\t\t"
+				+ getEdad() + "\t\t" + s;
+		
+		return  string;
+	}
+	
+}

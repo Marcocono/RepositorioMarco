@@ -1,0 +1,13 @@
+package clases;
+
+public class Mensajes extends Paquete{
+	
+	private int CantidadSMS;
+	private int CantidadMMS;
+	@Override
+	protected float Total() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

@@ -1,0 +1,8 @@
+package clases;
+
+public class TiempoAire extends Paquete {
+	private int MinNormales;
+	private int MinPromocionales;
+	private int MinLlamadasInter;
+	
+}

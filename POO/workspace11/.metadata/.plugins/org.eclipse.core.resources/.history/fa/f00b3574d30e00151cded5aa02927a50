@@ -1,0 +1,16 @@
+package clases;
+
+import java.util.Date;
+
+public abstract class  Paquete {
+	protected int costo;
+	protected Date fechaAdquisicion;
+	
+	public Paquete(int costo, Date fechaAdquisicion) {
+		super();
+		this.costo = costo;
+		this.fechaAdquisicion = fechaAdquisicion;
+	}
+	
+	protected abstract float Total();
+}

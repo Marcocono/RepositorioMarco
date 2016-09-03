@@ -1,0 +1,46 @@
+package clases;
+
+public class Internet extends Paquete {
+	private float mbDisponibles;
+	
+	public Internet(float mbDisponibles, int velocidad, String tecnologia) {
+		super();
+		this.mbDisponibles = mbDisponibles;
+		this.velocidad = velocidad;
+		Tecnologia = tecnologia;
+	}
+
+	private int velocidad;
+	private String Tecnologia;
+	
+	@Override
+	protected float Total() {
+		return 0;
+	}
+
+	public float getMbDisponibles() {
+		return mbDisponibles;
+	}
+
+	public void setMbDisponibles(float mbDisponibles) {
+		this.mbDisponibles = mbDisponibles;
+	}
+
+	public int getVelocidad() {
+		return velocidad;
+	}
+
+	public void setVelocidad(int velocidad) {
+		this.velocidad = velocidad;
+	}
+
+	public String getTecnologia() {
+		return Tecnologia;
+	}
+
+	public void setTecnologia(String tecnologia) {
+		Tecnologia = tecnologia;
+	}
+	
+	
+}

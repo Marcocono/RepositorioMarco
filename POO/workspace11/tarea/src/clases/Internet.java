@@ -1,0 +1,76 @@
+package clases;
+
+import java.util.Date;
+
+import javax.swing.JOptionPane;
+
+public class Internet extends Paquete {
+	private float mbDisponibles;
+	private int velocidad;
+	private String Tecnologia;
+	private String errores = "";
+	
+	public Internet(float mbDisponibles, int velocidad, String tecnologia,int costo, Date fechaAdquisicion) {
+		super(costo,fechaAdquisicion);
+	}
+
+	public Internet(){
+		super();
+		
+	}
+
+	public String validarDatos(){
+	    if(mbDisponibles==0)
+		    errores+="No cuenta con MB disponibles.\n";
+		if(velocidad==0)
+			errores+="Ingrese velocidad de descarga.\n";
+		if(Tecnologia.isEmpty())
+		    errores+="Ingrese la tecnologia a usar..\n";
+		return errores;
+	}
+	
+	public void IngresarDatos(Internet internet){
+		costo = Integer.valueOf(JOptionPane.showInputDialog("Costo del paquete",super.getCosto()));
+		mbDisponibles = Float.valueOf(JOptionPane.showInputDialog("MB disponibles:",this.getMbDisponibles()));
+		velocidad = Integer.valueOf(JOptionPane.showInputDialog("Velocidad:",this.getMbDisponibles()));
+		Tecnologia = JOptionPane.showInputDialog("Tecnologia:",this.getMbDisponibles());
+		}
+	
+	
+	@Override
+	protected float Total() {
+		return 0;
+	}
+
+	public float getMbDisponibles() {
+		return mbDisponibles;
+	}
+
+	public void setMbDisponibles(float mbDisponibles) {
+		this.mbDisponibles = mbDisponibles;
+	}
+
+	public int getVelocidad() {
+		return velocidad;
+	}
+
+	public void setVelocidad(int velocidad) {
+		this.velocidad = velocidad;
+	}
+
+	public String getTecnologia() {
+		return Tecnologia;
+	}
+
+	public void setTecnologia(String tecnologia) {
+		Tecnologia = tecnologia;
+	}
+
+	@Override
+	public String toString() {
+		return "\t\t" + this.getMbDisponibles() + "\t\t"
+				+ this.getVelocidad() + "\t\t" + this.getTecnologia() ;
+	}
+	
+	
+}

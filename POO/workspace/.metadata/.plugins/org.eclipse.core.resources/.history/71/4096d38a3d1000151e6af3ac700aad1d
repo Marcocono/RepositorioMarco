@@ -1,0 +1,48 @@
+package clases;
+
+import java.util.Date;
+
+public class Mensajes extends Paquete{
+	
+	private int CantidadSMS;
+	private int CantidadMMS;
+	
+	public Mensajes(){
+		super();
+		
+	}
+	
+	public IngresarDatos(){
+		
+	}
+	
+	public Mensajes(int costo, Date fechaAdquisicion, int cantidadSMS,
+			int cantidadMMS) {
+		super(costo, fechaAdquisicion);
+		CantidadSMS = cantidadSMS;
+		CantidadMMS = cantidadMMS;
+	}
+
+	@Override
+	protected float Total() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public int getCantidadSMS() {
+		return CantidadSMS;
+	}
+
+	public void setCantidadSMS(int cantidadSMS) {
+		CantidadSMS = cantidadSMS;
+	}
+
+	public int getCantidadMMS() {
+		return CantidadMMS;
+	}
+
+	public void setCantidadMMS(int cantidadMMS) {
+		CantidadMMS = cantidadMMS;
+	}
+
+}

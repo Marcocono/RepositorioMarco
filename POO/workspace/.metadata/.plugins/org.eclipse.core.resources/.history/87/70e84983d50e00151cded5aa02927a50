@@ -1,0 +1,43 @@
+package clases;
+
+import javax.swing.JOptionPane;
+
+public class Principal {
+	private int op = 0;
+	
+	public Principal(){
+		
+		do{
+			op = Integer.valueOf(JOptionPane.showInputDialog(null, "Ingrese una opccion:\n1 - Agregar suscriptor.\n2 - Eliminar suscriptor."
+					+ "\n3 - Mostrar suscriptores.\n4 - Salir. "));
+			
+			switch (op) {
+			case 1:
+				
+				break;
+			case 2:
+				
+				break;
+			case 3:
+				
+				break;
+			case 4:
+				JOptionPane.showMessageDialog(null, " Bye Bye ¬¬");
+				break;
+
+			default:
+				JOptionPane.showMessageDialog(null, "Valor invalido");
+				break;
+			}
+			
+			
+		}while(op == 4 || op <1 || op > 4 );
+		
+		
+		
+	}
+	
+	public static void main(String[] args) {
+		new Principal();
+	}
+}

@@ -1,0 +1,10 @@
+package Principal
+
+import javafx.scene.layout.BorderPane
+import Principal.PrincipalController
+
+component Principal controlledby PrincipalController {
+	BorderPane {
+		//TODO Add Nodes
+	}
+}

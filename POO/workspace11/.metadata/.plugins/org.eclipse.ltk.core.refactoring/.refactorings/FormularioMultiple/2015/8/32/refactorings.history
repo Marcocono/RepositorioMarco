@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;Formulario.Formulario1Controller&apos; to &apos;FormularioPrincipalController&apos;&#x0D;&#x0A;- Original project: &apos;FormularioMultiple&apos;&#x0D;&#x0A;- Original element: &apos;Formulario.Formulario1Controller&apos;&#x0D;&#x0A;- Renamed element: &apos;Formulario.FormularioPrincipalController&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Formulario1Controller&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;Formulario{Formulario1Controller.java[Formulario1Controller" matchStrategy="1" name="FormularioPrincipalController" qualified="false" references="true" similarDeclarations="false" stamp="1438619107552" textual="false" version="1.0"/>
+</session>

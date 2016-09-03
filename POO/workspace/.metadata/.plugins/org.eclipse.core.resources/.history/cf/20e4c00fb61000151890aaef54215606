@@ -1,0 +1,90 @@
+package clases;
+
+import java.util.ArrayList;
+
+import javax.swing.JOptionPane;
+
+public class Principal {
+	
+	private ArrayList<Cliente> cliente;
+	private int op = 0;
+	private int op1 = 0;
+	private Cliente cliente1;
+
+	
+	public Principal(){
+		
+		cliente = new ArrayList<Cliente>();
+		do{
+			op = Integer.valueOf(JOptionPane.showInputDialog(null, "Ingrese una opccion:\n1 - Agregar suscriptor.\n2 - Eliminar suscriptor."
+					+ "\n3 - Mostrar suscriptores.\n4 - Salir. "));
+			
+			switch (op) {
+			case 1:
+				agregarSuscriptor();
+				break;
+			case 2:
+				eliminarSuscriptor();
+				break;
+			case 3:
+				mostrarDatos();
+				break;
+			case 4:
+				JOptionPane.showMessageDialog(null, " Bye Bye ¬¬");
+				System.exit(0);
+				break;
+
+			default:
+				JOptionPane.showMessageDialog(null, "Valor invalido");
+				break;
+			}
+			
+			
+		}while(op != 4  );
+		
+	}
+	
+	private void eliminarSuscriptor(){
+		op1 = Integer.valueOf(JOptionPane.showInputDialog("Que indice desea eliminar?"));
+		cliente.remove(op1);
+	}
+	
+	private void agregarSuscriptor(){
+		//Ingrese un dato o los datos.
+		//Validar datos.
+		//Si es correcto: Agregar al ArrayList
+		//Si no es correcto: Volver a ingresar la informacion
+		
+		cliente1 = new Cliente();
+		String errores= "";
+		do{
+			errores = "";
+			cliente1.solicitarDatos(new Cliente());
+			errores+= cliente1.validarDatos();
+			if(cliente1.validarDatos().isEmpty())
+				errores = "";
+			try {
+				op = Integer.valueOf(JOptionPane.showInputDialog("Cuantas lineas desea agregar:"));
+				for(int i= 0; i < op ; i++){
+					cliente1.lineaTelefonica.add(new LineaTelefonica());	}
+			} catch (NumberFormatException e) {
+				errores+="Ingrese un numero valido.\n";
+			}
+			
+			if(!errores.isEmpty())
+				JOptionPane.showMessageDialog(null, errores);
+		}while(!errores.isEmpty());
+		cliente.add(cliente1);
+	}
+	
+	private void mostrarDatos(){
+		for(int i = 0; i < cliente.size(); i++){
+			cliente.get(i).toString();
+			System.out.println("------------------------------------------\n");
+		}
+	}
+	public static void main(String[] args) {
+		new Principal();
+	}
+	
+}

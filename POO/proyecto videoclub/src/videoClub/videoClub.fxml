@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="513.0" prefWidth="973.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="videoClub.VideoClubController">
+   <children>
+      <MenuBar prefHeight="80.0" prefWidth="1024.0" AnchorPane.bottomAnchor="587.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Formulario 1">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#abrirFormulario1" text="abrir" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Formulario2">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#abrirFormulario2" text="Abrir" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <SplitPane dividerPositions="0.6280909990108803" layoutY="23.0" prefHeight="546.0" prefWidth="593.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="23.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="544.0" prefWidth="434.0">
+               <children>
+                  <AnchorPane prefHeight="638.0" prefWidth="632.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <SplitPane dividerPositions="0.8868312757201646" orientation="VERTICAL" prefHeight="638.0" prefWidth="632.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <GridPane prefHeight="546.0" prefWidth="630.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="184.0" minWidth="10.0" prefWidth="100.33332824707031" />
+                                        <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="342.0" minWidth="10.0" prefWidth="203.6666717529297" />
+                                          <ColumnConstraints fillWidth="false" halignment="RIGHT" hgrow="SOMETIMES" maxWidth="342.0" minWidth="10.0" prefWidth="117.66665649414062" />
+                                          <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="342.0" minWidth="10.0" prefWidth="211.33334350585938" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label text="Codigo:">
+                                             <padding>
+                                                <Insets right="15.0" />
+                                             </padding>
+                                          </Label>
+                                          <Label text="Nombre:" GridPane.rowIndex="1">
+                                             <padding>
+                                                <Insets right="15.0" />
+                                             </padding>
+                                          </Label>
+                                          <Label text="Descripcion:" GridPane.rowIndex="2">
+                                             <padding>
+                                                <Insets right="15.0" />
+                                             </padding>
+                                          </Label>
+                                          <Label text="Categoria:" GridPane.rowIndex="3">
+                                             <padding>
+                                                <Insets right="15.0" />
+                                             </padding>
+                                          </Label>
+                                          <Label text="Usuario:" GridPane.rowIndex="4">
+                                             <padding>
+                                                <Insets right="15.0" />
+                                             </padding>
+                                          </Label>
+                                          <Label text="Estatus:" GridPane.rowIndex="5">
+                                             <padding>
+                                                <Insets right="15.0" />
+                                             </padding>
+                                          </Label>
+                                          <Label text="Precio alquiler:" GridPane.columnIndex="2" GridPane.rowIndex="7">
+                                             <padding>
+                                                <Insets right="15.0" />
+                                             </padding>
+                                          </Label>
+                                          <Label text="Formato:" GridPane.rowIndex="7">
+                                             <padding>
+                                                <Insets right="15.0" />
+                                             </padding>
+                                          </Label>
+                                          <Label text="Fecha renta:" GridPane.rowIndex="8">
+                                             <padding>
+                                                <Insets right="15.0" />
+                                             </padding>
+                                          </Label>
+                                          <ListView prefHeight="60.0" prefWidth="157.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                          <TextArea prefHeight="60.0" prefWidth="245.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                          <TextField fx:id="txtNombre" prefHeight="25.0" prefWidth="188.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <TextField fx:id="txtCodigo" prefHeight="25.0" prefWidth="188.0" GridPane.columnIndex="1" />
+                                          <TextField fx:id="txtPrecioAlquiler" prefHeight="25.0" prefWidth="109.0" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+                                          <HBox fillHeight="false" minWidth="-Infinity" prefHeight="17.0" prefWidth="174.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                                             <children>
+                                                <RadioButton mnemonicParsing="false" text="RadioButton">
+                                                   <padding>
+                                                      <Insets right="10.0" top="20.0" />
+                                                   </padding>
+                                                </RadioButton>
+                                                <RadioButton mnemonicParsing="false" text="RadioButton">
+                                                   <padding>
+                                                      <Insets right="10.0" top="20.0" />
+                                                   </padding>
+                                                </RadioButton>
+                                             </children>
+                                          </HBox>
+                                          <DatePicker GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                          <Label text="Identidad" GridPane.columnIndex="2">
+                                             <padding>
+                                                <Insets right="15.0" />
+                                             </padding>
+                                          </Label>
+                                          <Label text="Nombre cliente:" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                             <padding>
+                                                <Insets right="15.0" />
+                                             </padding>
+                                          </Label>
+                                          <Label text="Telefono:" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                             <padding>
+                                                <Insets right="15.0" />
+                                             </padding>
+                                          </Label>
+                                          <Label text="Demoras:" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                             <padding>
+                                                <Insets right="15.0" />
+                                             </padding>
+                                          </Label>
+                                          <Label text="Demoras (L) :" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                             <padding>
+                                                <Insets right="15.0" />
+                                             </padding>
+                                          </Label>
+                                          <Label text="Total:" GridPane.columnIndex="2" GridPane.rowIndex="9">
+                                             <padding>
+                                                <Insets right="15.0" />
+                                             </padding>
+                                          </Label>
+                                          <Label text="Devolucion" GridPane.rowIndex="9">
+                                             <padding>
+                                                <Insets right="15.0" />
+                                             </padding>
+                                          </Label>
+                                          <TextField fx:id="txtIdentidadCliente" prefHeight="25.0" prefWidth="182.0" GridPane.columnIndex="3" />
+                                          <TextField fx:id="txtNombreCliente" prefHeight="25.0" prefWidth="182.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                          <TextField fx:id="txtTelefono" prefHeight="25.0" prefWidth="148.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                                          <TextField prefHeight="25.0" prefWidth="70.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                                          <TextField fx:id="txtDemoraLempiras" prefHeight="25.0" prefWidth="130.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                                          <TextField fx:id="txtTotal" prefHeight="25.0" prefWidth="169.0" GridPane.columnIndex="3" GridPane.rowIndex="9" />
+                                          <DatePicker GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                                          <ComboBox fx:id="cboPelicula" prefHeight="25.0" prefWidth="165.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                          <Label text="Moneda" GridPane.rowIndex="6">
+                                             <GridPane.margin>
+                                                <Insets />
+                                             </GridPane.margin>
+                                             <padding>
+                                                <Insets right="15.0" />
+                                             </padding>
+                                          </Label>
+                                          <ComboBox fx:id="cboMoneda" prefHeight="25.0" prefWidth="151.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                          <Label text="Cantidad peliculas:" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                                             <padding>
+                                                <Insets right="15.0" />
+                                             </padding>
+                                          </Label>
+                                          <TextField fx:id="txtCantidadPeliculas" prefHeight="25.0" prefWidth="61.0" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                                          <Label text="Demora($):" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                                             <GridPane.margin>
+                                                <Insets />
+                                             </GridPane.margin>
+                                             <padding>
+                                                <Insets right="15.0" />
+                                             </padding>
+                                          </Label>
+                                          <TextField fx:id="txtDemoraDolares" prefHeight="25.0" prefWidth="129.0" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                                          <TextField fx:id="txtEstatus" prefHeight="25.0" prefWidth="158.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <HBox prefHeight="84.0" prefWidth="630.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <Button fx:id="btnAgregar" mnemonicParsing="false" onAction="#agregar" prefHeight="33.0" prefWidth="80.0" text="Agregar">
+                                             <HBox.margin>
+                                                <Insets left="120.0" right="20.0" top="10.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button fx:id="btnEliminar" mnemonicParsing="false" onAction="#eliminar" prefHeight="32.0" prefWidth="70.0" text="Eliminar">
+                                             <HBox.margin>
+                                                <Insets right="20.0" top="10.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button fx:id="btnModificar" mnemonicParsing="false" onAction="#eliminar" prefHeight="32.0" prefWidth="74.0" text="Modificar">
+                                             <HBox.margin>
+                                                <Insets right="20.0" top="10.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button mnemonicParsing="false" onAction="#Salir" prefHeight="34.0" prefWidth="70.0" text="Salir">
+                                             <HBox.margin>
+                                                <Insets right="20.0" top="10.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+               </children></AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <SplitPane orientation="VERTICAL" prefHeight="547.0" prefWidth="279.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <TableView fx:id="tblInformacion" layoutX="14.0" layoutY="28.0" prefHeight="455.0" prefWidth="277.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columns>
+                                  <TableColumn fx:id="clmnCodigoVenta" prefWidth="75.0" text="Codigo" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

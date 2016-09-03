@@ -1,0 +1,53 @@
+package clases;
+
+public class Cliente {
+	private long identidad;
+	private String Nombre;
+	private String Apellido;
+	private String Genero;
+	private int edad;
+	private ArrayList<LineaTelefonica> lineaTelefonica;
+	
+	
+	public Cliente(long identidad, String nombre, String apellido,
+			String genero, int edad) {
+		super();
+		this.identidad = identidad;
+		Nombre = nombre;
+		Apellido = apellido;
+		Genero = genero;
+		this.edad = edad;
+	}
+	
+	public long getIdentidad() {
+		return identidad;
+	}
+	public void setIdentidad(long identidad) {
+		this.identidad = identidad;
+	}
+	public String getNombre() {
+		return Nombre;
+	}
+	public void setNombre(String nombre) {
+		Nombre = nombre;
+	}
+	public String getApellido() {
+		return Apellido;
+	}
+	public void setApellido(String apellido) {
+		Apellido = apellido;
+	}
+	public String getGenero() {
+		return Genero;
+	}
+	public void setGenero(String genero) {
+		Genero = genero;
+	}
+	public int getEdad() {
+		return edad;
+	}
+	public void setEdad(int edad) {
+		this.edad = edad;
+	}
+	
+}

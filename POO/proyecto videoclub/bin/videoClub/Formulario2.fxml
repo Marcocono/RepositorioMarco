@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="292.0" prefWidth="529.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="videoClub.Formulario2Controller">
+   <children>
+      <Label layoutX="113.0" layoutY="85.0" prefHeight="122.0" prefWidth="267.0" text="Formulario3">
+         <font>
+            <Font name="AR CENA" size="47.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

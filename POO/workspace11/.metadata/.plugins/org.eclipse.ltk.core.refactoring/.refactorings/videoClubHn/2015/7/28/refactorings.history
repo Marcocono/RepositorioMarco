@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;modelo.conexion&apos; to &apos;Conexion&apos;&#x0D;&#x0A;- Original project: &apos;videoClubHn&apos;&#x0D;&#x0A;- Original element: &apos;modelo.conexion&apos;&#x0D;&#x0A;- Renamed element: &apos;modelo.Conexion&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;conexion&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;modelo{conexion.java[conexion" matchStrategy="1" name="Conexion" qualified="false" references="true" similarDeclarations="false" stamp="1436293468778" textual="false" version="1.0"/>
+</session>

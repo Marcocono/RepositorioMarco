@@ -1,0 +1,17 @@
+package clases;
+
+public class TiempoAire extends Paquete {
+	private int MinNormales;
+	private int MinPromocionales;
+	private int MinLlamadasInter;
+	public int suma;
+	
+	
+	
+	@Override
+	protected float Total() {
+		//SUMA DE MINUTOS TIEMPO AIRE
+		return (MinNormales+ MinPromocionales +MinLlamadasInter);
+	}
+	
+}

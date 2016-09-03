@@ -1,0 +1,67 @@
+package clases;
+
+import java.util.Date;
+
+import javax.swing.JOptionPane;
+
+public class Internet extends Paquete {
+	private float mbDisponibles;
+	private int velocidad;
+	private String Tecnologia;
+	
+	public Internet(float mbDisponibles, int velocidad, String tecnologia,int costo, Date fechaAdquisicion) {
+		super(costo,fechaAdquisicion);
+		this.mbDisponibles = mbDisponibles;
+		this.velocidad = velocidad;
+		Tecnologia = tecnologia;
+	}
+
+	public Internet(){
+		super();
+		
+	}
+
+	public void IngresarDatos(Internet internet){
+		mbDisponibles = Long.valueOf(JOptionPane.showInputDialog("MB disponibles:",this.getMbDisponibles()));
+		velocidad = Integer.valueOf(JOptionPane.showInputDialog("MB disponibles:",this.getMbDisponibles()));
+		Tecnologia = JOptionPane.showInputDialog("MB disponibles:",this.getMbDisponibles());
+		}
+	
+	
+	@Override
+	protected float Total() {
+		return 0;
+	}
+
+	public float getMbDisponibles() {
+		return mbDisponibles;
+	}
+
+	public void setMbDisponibles(float mbDisponibles) {
+		this.mbDisponibles = mbDisponibles;
+	}
+
+	public int getVelocidad() {
+		return velocidad;
+	}
+
+	public void setVelocidad(int velocidad) {
+		this.velocidad = velocidad;
+	}
+
+	public String getTecnologia() {
+		return Tecnologia;
+	}
+
+	public void setTecnologia(String tecnologia) {
+		Tecnologia = tecnologia;
+	}
+
+	@Override
+	public String toString() {
+		return "\t\t" + this.getMbDisponibles() + "\t\t"
+				+ this.getVelocidad() + "\t\t" + this.getTecnologia() ;
+	}
+	
+	
+}

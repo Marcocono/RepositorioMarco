@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="639.0" prefWidth="567.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Inventario.InventarioController">
+   <children>
+      <SplitPane dividerPositions="0.7331240188383046" layoutX="61.0" layoutY="77.0" orientation="VERTICAL" prefHeight="402.0" prefWidth="317.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="439.0" prefWidth="587.0">
+               <children>
+                  <GridPane layoutX="-3.0" layoutY="36.0" prefHeight="481.0" prefWidth="564.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="-3.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="36.0">
+                    <columnConstraints>
+                      <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="277.0" minWidth="10.0" prefWidth="141.0" />
+                      <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="423.0" minWidth="10.0" prefWidth="423.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="39.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="45.0" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="30.0" minHeight="1.0" prefHeight="26.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="35.0" minHeight="10.0" prefHeight="24.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="36.0" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="39.0" minHeight="10.0" prefHeight="24.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="34.0" minHeight="10.0" prefHeight="26.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="23.0" minHeight="10.0" prefHeight="22.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="34.0" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="45.0" minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="30.0" minHeight="9.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="147.0" text="Codigo producto:" />
+                        <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="147.0" text="Precio venta:" GridPane.rowIndex="5" />
+                        <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="147.0" text="Descripccion:" GridPane.rowIndex="2" />
+                        <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="147.0" text="Nombre producto:" GridPane.rowIndex="1" />
+                        <Label alignment="CENTER_RIGHT" prefHeight="24.0" prefWidth="141.0" text="Precio compra:" GridPane.rowIndex="4" />
+                        <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="147.0" text="Marca:" GridPane.rowIndex="3" />
+                        <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="147.0" text="Lote:" GridPane.rowIndex="7" />
+                        <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="147.0" text="Codigo de barras:" GridPane.rowIndex="6" />
+                        <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="147.0" text="Categoria:" GridPane.rowIndex="8" />
+                        <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="147.0" text="Existencia:" GridPane.rowIndex="9" />
+                        <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="147.0" text="Fecha de vencimiento:" GridPane.rowIndex="11" />
+                        <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="147.0" text="Moneda:" GridPane.rowIndex="10" />
+                        <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="147.0" text="Provedor:" GridPane.rowIndex="12" />
+                        <TextField prefHeight="25.0" prefWidth="330.0" GridPane.columnIndex="1" />
+                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <TextArea prefHeight="35.0" prefWidth="436.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <ComboBox prefHeight="25.0" prefWidth="385.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <DatePicker GridPane.columnIndex="1" GridPane.rowIndex="11" />
+                        <ComboBox prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                        <ComboBox prefHeight="25.0" prefWidth="384.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                        <ComboBox prefHeight="25.0" prefWidth="226.0" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="10">
+                           <children>
+                              <RadioButton mnemonicParsing="false" prefHeight="27.0" prefWidth="99.0" text="Lempira">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="moneda" />
+                                 </toggleGroup>
+                                 <padding>
+                                    <Insets right="20.0" top="10.0" />
+                                 </padding>
+                              </RadioButton>
+                              <RadioButton mnemonicParsing="false" text="Dolar" toggleGroup="$moneda">
+                                 <padding>
+                                    <Insets right="20.0" top="10.0" />
+                                 </padding>
+                              </RadioButton>
+                              <RadioButton mnemonicParsing="false" text="Euro" toggleGroup="$moneda">
+                                 <padding>
+                                    <Insets right="20.0" top="10.0" />
+                                 </padding>
+                              </RadioButton>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="30.0" prefWidth="408.0" GridPane.columnIndex="1" GridPane.rowIndex="13">
+                           <children>
+                              <Button mnemonicParsing="false" text="Button">
+                                 <HBox.margin>
+                                    <Insets right="5.0" top="3.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" text="Button">
+                                 <HBox.margin>
+                                    <Insets right="5.0" top="3.0" />
+                                 </HBox.margin></Button>
+                              <Button mnemonicParsing="false" text="Button">
+                                 <HBox.margin>
+                                    <Insets right="5.0" top="3.0" />
+                                 </HBox.margin></Button>
+                              <Button mnemonicParsing="false" text="Button">
+                                 <HBox.margin>
+                                    <Insets right="5.0" top="3.0" />
+                                 </HBox.margin></Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </GridPane>
+                  <MenuBar layoutY="2.0" prefHeight="27.0" prefWidth="587.0" AnchorPane.bottomAnchor="491.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <menus>
+                      <Menu mnemonicParsing="false" text="File">
+                        <items>
+                          <MenuItem mnemonicParsing="false" text="Close" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Edit">
+                        <items>
+                          <MenuItem mnemonicParsing="false" text="Delete" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Help">
+                        <items>
+                          <MenuItem mnemonicParsing="false" text="About" />
+                        </items>
+                      </Menu>
+                    </menus>
+                  </MenuBar>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="135.0" prefWidth="565.0">
+               <children>
+                  <TreeTableView layoutX="7.0" layoutY="6.0" prefHeight="154.0" prefWidth="552.0" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="6.0">
+                    <columns>
+                      <TreeTableColumn prefWidth="75.0" text="C1" />
+                      <TreeTableColumn prefWidth="75.0" text="C2" />
+                        <TreeTableColumn prefWidth="75.0" text="C2" />
+                        <TreeTableColumn prefWidth="75.0" text="C2" />
+                        <TreeTableColumn prefWidth="75.0" text="C2" />
+                        <TreeTableColumn prefWidth="75.0" text="C2" />
+                        <TreeTableColumn prefWidth="75.0" text="C2" />
+                    </columns>
+                  </TreeTableView>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

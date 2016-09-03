@@ -1,0 +1,9 @@
+package clases;
+
+import java.util.Date;
+
+public abstract class  Paquete {
+	protected int costo;
+	protected Date fechaAdquisicion;
+	protected abstract int Total();
+}

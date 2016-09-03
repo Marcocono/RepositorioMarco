@@ -1,0 +1,104 @@
+package clases;
+
+import java.util.ArrayList;
+
+import javax.swing.JOptionPane;
+
+public class LineaTelefonica {
+	
+	private long numeroTelefonico;
+	private long imei;
+	private LineaTelefonica lineaTelefonica;
+	private ArrayList<Paquete> array; 
+	private int op = 0;
+	private String errores = "";
+	Mensajes mensajes;
+	TiempoAire tiempoAire;
+	Internet internet;
+	
+	//Como el constructor vacio ya esta asignado decidi ponerle uno boleano
+	public LineaTelefonica(boolean b){
+		
+	}
+	public LineaTelefonica(){ 
+		array = new ArrayList<Paquete>();	
+	}
+
+	
+	public void solicitarDatos(LineaTelefonica lineaTelefonica){
+		
+		numeroTelefonico = Long.valueOf(JOptionPane.showInputDialog("Ingrese el numero telefonico:", this.getNumeroTelefonico())); 
+		imei = Long.valueOf(JOptionPane.showInputDialog("Imei:", this.getImei())); 
+		do{
+		op = Integer.valueOf(JOptionPane.showInputDialog("Que desea agregar:\n1 - Paquete de mensajes.\n2 - Paquete de internet."+
+		"\n3 - Tiempo aire.\n4 - Continuar."));
+			switch (op) {
+			case 1:
+				mensajes = new Mensajes();
+				mensajes.IngresarDatos(new Mensajes());
+				errores += mensajes.validarDatos();
+				array.add(mensajes);
+				break;
+			case 2:
+				internet = new Internet();
+				internet.IngresarDatos(new Internet());
+				array.add(internet);
+				break;
+			case 3:
+				tiempoAire = new TiempoAire();
+				tiempoAire.ingresarDatos(new TiempoAire());
+				array.add(tiempoAire);
+				break;
+			case 4:
+				break;
+
+			default:
+				JOptionPane.showMessageDialog(null, "Ingrese una opcion.");
+				break;
+			}
+		}while(op != 4);
+		
+	}
+
+	public String validarDatos(){
+	    if(numeroTelefonico==0)
+		    errores+="El campo numero telefonico esta vacio\n";
+		if(imei==0)
+			errores+="El campo imei esta vacio\n";
+		return errores;
+	}
+	
+	public long getNumeroTelefonico() {
+		return numeroTelefonico;
+	}
+
+	public void setNumeroTelefonico(long numeroTelefonico) {
+		this.numeroTelefonico = numeroTelefonico;
+	}
+
+	public long getImei() {
+		return imei;
+	}
+
+	public void setImei(long imei) {
+		this.imei = imei;
+	}
+
+	public String getErrores() {
+		return errores;
+	}
+	public void setErrores(String errores) {
+		this.errores = errores;
+	}
+	@Override
+	public String toString() {
+		String s= "";
+		for(int i = 0;i<array.size();i++){
+			s += array.get(i).toString();
+		}
+		
+		return "\t\t" + numeroTelefonico
+				+ "\t\t" + imei + "\t\t" + lineaTelefonica
+				+ "\t\t" + array + "\t\t"+ s ;
+	}
+}

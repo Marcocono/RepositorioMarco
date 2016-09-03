@@ -1,0 +1,29 @@
+package Formulario;
+
+import javafx.fxml.FXML;
+
+public class Formulario1Controller {
+	private Main main;
+
+	
+	public Formulario1Controller(){
+		
+	}
+	
+	public Main getMain() {
+		return main;
+	}
+
+	public void setMain(Main main) {
+		this.main = main;
+	}
+	
+	@FXML public void abrirFormulario1(){
+		
+	}
+	
+	@FXML public void abrirFormulario2(){
+		
+	}
+	
+}

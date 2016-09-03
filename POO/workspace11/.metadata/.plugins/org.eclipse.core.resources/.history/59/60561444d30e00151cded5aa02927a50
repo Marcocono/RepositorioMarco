@@ -1,0 +1,32 @@
+package clases;
+
+public class LineaTelefonica {
+	
+	private long numeroTelefonico;
+	private long imei;
+	
+	public LineaTelefonica(long numeroTelefonico, long imei) {
+		super();
+		this.numeroTelefonico = numeroTelefonico;
+		this.imei = imei;
+	}
+
+	public LineaTelefonica(){ }
+
+	public long getNumeroTelefonico() {
+		return numeroTelefonico;
+	}
+
+	public void setNumeroTelefonico(long numeroTelefonico) {
+		this.numeroTelefonico = numeroTelefonico;
+	}
+
+	public long getImei() {
+		return imei;
+	}
+
+	public void setImei(long imei) {
+		this.imei = imei;
+	}
+	
+}

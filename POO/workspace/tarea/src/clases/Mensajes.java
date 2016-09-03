@@ -1,0 +1,64 @@
+package clases;
+
+import java.util.Date;
+
+import javax.swing.JOptionPane;
+
+public class Mensajes extends Paquete{
+	
+	private int CantidadSMS;
+	private int CantidadMMS;
+	private String errores = "";
+	
+	public Mensajes(){
+		super();
+	}
+	
+	public void IngresarDatos(Mensajes mensaje){
+		costo = Integer.valueOf(JOptionPane.showInputDialog("Costo del paquete"));
+		CantidadSMS = Integer.valueOf(JOptionPane.showInputDialog("Cantidad de mensajes de texto:",this.getCantidadSMS()));
+		CantidadMMS = Integer.valueOf(JOptionPane.showInputDialog("Cantidad de mensajes multimedia:",this.getCantidadMMS()));
+	}
+	
+	public Mensajes(int costo, Date fechaAdquisicion, int cantidadSMS,
+			int cantidadMMS) {
+		super(costo, fechaAdquisicion);;
+	}
+	
+	public String validarDatos(){
+	    if(CantidadSMS==0)
+		    errores+="Ingrese los mensajes de texto.\n";
+		if(CantidadMMS==0)
+			errores+="Ingrese los mensajes multimedia.\n";
+		return errores;
+	}
+	
+	@Override
+	protected float Total() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public int getCantidadSMS() {
+		return CantidadSMS;
+	}
+
+	public void setCantidadSMS(int cantidadSMS) {
+		CantidadSMS = cantidadSMS;
+	}
+
+	public int getCantidadMMS() {
+		return CantidadMMS;
+	}
+
+	public void setCantidadMMS(int cantidadMMS) {
+		CantidadMMS = cantidadMMS;
+	}
+
+	@Override
+	public String toString() {
+		return "\t\t" + this.getCantidadMMS() + "\t\t"
+				+ this.CantidadSMS;
+	}
+
+}
